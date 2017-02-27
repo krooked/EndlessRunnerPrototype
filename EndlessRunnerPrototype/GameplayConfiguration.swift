@@ -10,7 +10,6 @@ import Foundation
 import CoreGraphics
 
 struct GameplayConfiguration {
-    static let numGrounds = 6
     static let groundY = CGFloat(240)
     static let backgroundY = CGFloat(460)
     static let skateboarderPosition = CGPoint(x: 200, y: 290)

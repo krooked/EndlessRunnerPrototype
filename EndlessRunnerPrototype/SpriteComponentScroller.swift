@@ -10,11 +10,9 @@ import UIKit
 import GameplayKit
 
 class SpriteComponentScroller {
-    private var entityManager: EntityManager?
     private var pool: GKEntityPool?
     private var runningImages = Array<GKEntity>()
     private var nextPosition: CGPoint = CGPoint.zero
-    private var debugView: SKShapeNode?
     private var unitDirectionVector: CGPoint?
 
     init(viewPort: CGRect, pool: GKEntityPool, rotation: CGFloat = CGFloat(0)) {
@@ -29,9 +27,6 @@ class SpriteComponentScroller {
 
         // Add initial image
         addInitialImages(withCount: pool.items.count - 1)
-        
-//        drawViewPort(viewPort: viewPort, content: contentNode)
-        
     }
 
     func update(withViewPort viewPort:CGRect) {
@@ -49,14 +44,6 @@ class SpriteComponentScroller {
             }
         }
         
-        debugView?.position = viewPort.origin
-    }
-    
-    private func drawViewPort(viewPort: CGRect, content: SKNode) {
-//        debugView = SKShapeNode(rect: viewPort)
-//        debugView?.fillColor = UIColor.cyan
-//        debugView?.lineWidth = 0
-//        content.addChild(debugView!)
     }
     
     private func removeImage(withImageToRemove image: GKEntity) {
