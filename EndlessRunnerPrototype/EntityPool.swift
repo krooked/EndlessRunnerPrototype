@@ -6,7 +6,6 @@ protocol GKEntityPool {
     var items: [GKEntity] { get set }
     mutating func addElement(_ element: GKEntity)
     mutating func popFirst() -> GKEntity
-    func nodeSize() -> CGSize
 }
 
 struct EntityPool: GKEntityPool {
@@ -43,10 +42,6 @@ struct EntityPool: GKEntityPool {
             let image = Image(imageName: name, position: CGPoint.zero, rotation: rotation)
             items.append(image)
         }
-    }
-        
-    func nodeSize() -> CGSize {
-        return spriteCompnentNodeSize!
     }
     
 }
