@@ -104,7 +104,7 @@ class GameScene: SKScene {
         var housesPool = EntityPool(entityManger: entityManager!, contentNode: backgroundNode)
         housesPool.fill(withType: Image.self, andImageName: "houses2", andCount: 6, andRotation: CGFloat(0))
         houseScroller = SpriteComponentScroller(viewPort: viewPort, pool: housesPool, rotation: GameplayConfiguration.grade.degreesToRadians())
-        //        // Street
+        // Street
         var streetPool = EntityPool(entityManger: entityManager!, contentNode: streetNode)
         streetPool.fill(withType: Image.self, andImageName: "street", andCount: 6, andRotation: GameplayConfiguration.grade.degreesToRadians())
         streetScroller = SpriteComponentScroller(viewPort: viewPort, pool: streetPool, rotation: GameplayConfiguration.grade.degreesToRadians())
